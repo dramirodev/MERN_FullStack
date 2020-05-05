@@ -3,6 +3,7 @@ import { Layout } from 'antd';
 import { LoadRoutes } from '../components/LoadRoutes';
 
 import './LayoutAdmin.scss';
+import MenuTop from '../components/Admin/MenuTop';
 
 const LayoutAdmin = (props) => {
   const { routes } = props;
@@ -10,12 +11,14 @@ const LayoutAdmin = (props) => {
 
   return (
     <Layout>
-      <Layout>
-        <Header>header</Header>
-        <Content>
+      <Layout className="layout-admin">
+        <Header className="layout-admin__header">
+          <MenuTop />
+        </Header>
+        <Content className="layout-admin__content">
           <LoadRoutes routes={routes} />
         </Content>
-        <Footer>Footer</Footer>
+        <Footer className="layout-admin__footer">Footer</Footer>
       </Layout>
     </Layout>
   );
