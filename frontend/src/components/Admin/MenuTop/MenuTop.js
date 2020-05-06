@@ -1,10 +1,14 @@
 import React from 'react';
 import './MenuTop.scss';
 import { Button } from 'antd';
-import { MenuUnfoldOutlined, PoweroffOutlined } from '@ant-design/icons';
+import {
+  MenuUnfoldOutlined,
+  PoweroffOutlined,
+  MenuFoldOutlined,
+} from '@ant-design/icons';
 import DavidLogo from '../../../assets/images/png/logo.png';
 
-const MenuTop = () => {
+const MenuTop = ({ setMenuCollapsed, menuCollapsed }) => {
   return (
     <div className="menu-top">
       <div className="menu-top__left">
@@ -13,8 +17,8 @@ const MenuTop = () => {
           alt="logo David ramiro"
           className="menu-top__left-logo"
         />
-        <Button type="link">
-          <MenuUnfoldOutlined />
+        <Button type="link" onClick={() => setMenuCollapsed(!menuCollapsed)}>
+          {menuCollapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
         </Button>
       </div>
 

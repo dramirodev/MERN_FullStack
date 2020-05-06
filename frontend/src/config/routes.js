@@ -1,6 +1,6 @@
 import LayoutAdmin from '../layouts/LayoutAdmin';
 import AdminHome from '../pages/admin';
-import AdminSigIn from '../pages/admin/SignIn';
+import AdminSigIn from '../pages/admin/SigIn';
 import LayoutBasic from '../layouts/LayoutBasic';
 import BasicHome from '../pages/Home';
 import BasicContact from '../pages/Contact';
